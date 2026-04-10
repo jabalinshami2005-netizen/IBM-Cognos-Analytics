@@ -51,7 +51,7 @@ Technologies Used
 * GitHub (version control & hosting)
 
 Live Demo
-
+https://github.com/jabalinshami2005-netizen/IBM-Cognos-Analytics
 
 
 Key Insights
