@@ -1,0 +1,52 @@
+const summaryStats = {
+  totalPatients: 200,
+  totalBillAmount: 23578941,
+  avgSatisfaction: 5.5,
+  readmissionCount: 72,
+  avgLos: 7.4
+};
+
+function renderKPIs() {
+  document.getElementById('kpiContainer').innerHTML = `
+    <div class="kpi-card">Patients: ${summaryStats.totalPatients}</div>
+    <div class="kpi-card">Revenue: $${summaryStats.totalBillAmount}</div>
+    <div class="kpi-card">Satisfaction: ${summaryStats.avgSatisfaction}</div>
+  `;
+}
+
+// Chart
+function loadChart() {
+  const ctx = document.getElementById('satisfactionChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['1','2','3','4','5'],
+      datasets: [{
+        label: 'Patients',
+        data: [10,20,30,25,15]
+      }]
+    }
+  });
+}
+
+// Login
+document.getElementById('doLoginBtn').onclick = () => {
+  const user = document.getElementById('loginUsername').value;
+  const pass = document.getElementById('loginPassword').value;
+
+  if(user === "admin" && pass === "123") {
+    document.getElementById('loginPage').style.display = "none";
+    document.getElementById('dashboardApp').style.display = "block";
+
+    renderKPIs();
+    loadChart();
+  } else {
+    document.getElementById('loginError').style.display = "block";
+  }
+};
+
+// Logout
+document.getElementById('logoutBtn').onclick = () => {
+  location.reload();
+};
