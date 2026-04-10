@@ -1,0 +1,42 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background: #eef2f7;
+}
+
+/* Login */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+/* Dashboard */
+.dashboard-wrapper {
+  display: none;
+}
+
+.navbar {
+  background: white;
+  padding: 15px;
+}
+
+/* KPI */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.kpi-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+}
